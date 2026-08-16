@@ -1,0 +1,10 @@
+ID,Name,Age,Net worth,Country,Salary,Join Date,Prediction note
+1.0,Alice,25.0,30000.0,NZ,55000.0,2020-01-15,Observed value
+2.0,Bob,30.0,35000.0,NZ,60000.0,2020-02-20,Observed value
+4.0,Charlie,35.0,40000.0,AUS,72000.0,,Observed value
+5.0,David,38.0,40939.37,NZ,68000.0,2019-11-01,Predicted by selected regression model from Salary
+,Eve,29.0,22000.0,AUS,59000.0,2019-01-13,Observed value
+7.0,,40.0,55000.0,NZ,65000.0,2018-05-30,Observed value
+8.0,Grace,22.0,28000.0,,64000.0,2021-07-25,Observed value
+9.0,Heidi,,,AUS,,2021-07-25,Not predicted: insufficient numeric predictors
+10.0,Ivan,27.0,60000.0,NZ,58000.0,2019-03-15,Observed value
