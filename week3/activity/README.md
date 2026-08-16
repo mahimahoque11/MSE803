@@ -78,6 +78,8 @@ The sample is also very small, so the results should be interpreted cautiously.
 
 ## Scatter-plot visualisation
 
+![Scatter plots showing relationships between numeric variables](scatter_plots.png)
+
 The program creates scatter plots for Age–Salary, Age–Net worth, and Net
 worth–Salary. Each dot represents one subject with both required values. The
 red fitted line shows the overall direction, while the title reports Pearson's
