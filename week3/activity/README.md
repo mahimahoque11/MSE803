@@ -12,7 +12,14 @@ From this folder:
 python initial_statistical_analysis.py
 ```
 
-The program prints the analysis and creates `cleaned_dataset.csv`.
+The program prints the analysis and creates `cleaned_dataset.csv` and
+`scatter_plots.png`.
+
+If Matplotlib is not installed, install it before running the program:
+
+```powershell
+python -m pip install matplotlib
+```
 
 ## Cleaning decisions
 
@@ -68,6 +75,18 @@ All three covariance results are positive, meaning the paired variables tend
 to increase together in this dataset. Covariance magnitude depends on the
 variables' units, so it should not be interpreted as a standardised strength.
 The sample is also very small, so the results should be interpreted cautiously.
+
+## Scatter-plot visualisation
+
+The program creates scatter plots for Age–Salary, Age–Net worth, and Net
+worth–Salary. Each dot represents one subject with both required values. The
+red fitted line shows the overall direction, while the title reports Pearson's
+correlation and the number of complete observations.
+
+An upward line supports a positive relationship and a downward line supports a
+negative relationship. Points far from the others may indicate outliers. These
+plots are exploratory: the dataset is too small to support strong population
+conclusions, and association does not prove causation.
 
 ## References
 

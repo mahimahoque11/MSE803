@@ -176,12 +176,61 @@ def print_analysis(rows: list[dict], issues: dict[str, int]) -> None:
     print("  Pearson r: standardised linear association from -1 to +1; it does not prove causation.")
 
 
+def create_scatter_plots(rows: list[dict]) -> Path | None:
+    """Create scatter plots for the three pairs of numeric variables."""
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("\nScatter plots were not created because Matplotlib is not installed.")
+        print("Install it with: python -m pip install matplotlib")
+        return None
+
+    pairs = (
+        ("Age", "Salary"),
+        ("Age", "Net worth"),
+        ("Net worth", "Salary"),
+    )
+    figure, axes = plt.subplots(1, 3, figsize=(16, 5))
+
+    for axis, (x_name, y_name) in zip(axes, pairs):
+        complete = [
+            (row[x_name], row[y_name])
+            for row in rows
+            if row[x_name] is not None and row[y_name] is not None
+        ]
+        x_values = np.array([pair[0] for pair in complete], dtype=float)
+        y_values = np.array([pair[1] for pair in complete], dtype=float)
+
+        axis.scatter(x_values, y_values, color="#1677b8", s=65, alpha=0.85)
+
+        # The fitted line makes the overall direction easier to see.
+        slope, intercept = np.polyfit(x_values, y_values, 1)
+        line_x = np.linspace(x_values.min(), x_values.max(), 100)
+        axis.plot(line_x, slope * line_x + intercept, color="#d9534f", linewidth=2)
+
+        correlation = float(np.corrcoef(x_values, y_values)[0, 1])
+        axis.set_title(f"{x_name} vs {y_name}\nr = {correlation:.3f}, n = {len(complete)}")
+        axis.set_xlabel(x_name)
+        axis.set_ylabel(y_name)
+        axis.grid(alpha=0.25)
+
+    figure.suptitle("Relationships Between Numeric Variables", fontsize=15)
+    figure.tight_layout()
+    output = Path(__file__).with_name("scatter_plots.png")
+    figure.savefig(output, dpi=300, bbox_inches="tight")
+    plt.close(figure)
+    return output
+
+
 def main() -> None:
     rows, issues = load_and_clean()
     file_saved = save_cleaned(rows)
     print_analysis(rows, issues)
+    plot_file = create_scatter_plots(rows)
     if file_saved:
         print(f"\nCleaned data saved to: {CLEANED}")
+    if plot_file:
+        print(f"Scatter plots saved to: {plot_file}")
 
 
 if __name__ == "__main__":
