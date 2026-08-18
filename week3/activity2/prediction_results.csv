@@ -1,0 +1,7 @@
+Subject,Missing field,Predictor,Linear result,Linear LOOCV RMSE,Polynomial result,Polynomial LOOCV RMSE,Selected model,Selected result,Interpretation
+David,Net worth,Salary,40939.37,16632.78,41401.99,20169.97,Linear,40939.37,Uncertain estimate; both cross-validated R2 values are negative
+Charlie,Join Date,Salary,2019-11-21,442.98 days,2019-12-01,564.42 days,Linear,2019-11-21,Uncertain estimate; hiring date is weakly related to Salary
+Grace,Country,Salary,NZ,0.625,NZ,0.914,Linear,NZ,Experimental category encoding; NZ=0 and AUS=1
+Heidi,Net worth,Join Date,24886.98,16604.66,28228.20,17208.98,Linear,24886.98,Uncertain estimate from six observed records
+Heidi,Salary,Join Date,61769.16,5902.31,64147.88,6221.33,Linear,61769.16,Uncertain estimate based only on Joining Date
+Heidi,Age,Join Date,22.35,5.94 years,22.83,16.11 years,Linear,22,Uncertain estimate rounded to a whole year
