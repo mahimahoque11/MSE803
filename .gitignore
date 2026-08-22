@@ -1,2 +1,6 @@
 # Python virtual environment
 .venv/
+
+# Activity 3 source datasets (downloadable from UCI)
+week3/activity3/beijing+multi+site+air+quality+data/
+week3/activity3/beijing_air_quality_combined.csv
