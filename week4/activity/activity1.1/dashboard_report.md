@@ -1,4 +1,4 @@
-# Week 4 Activity 1: Happiness Dashboard Report
+# Week 4 Activity 1.1: Happiness Dashboard Report
 
 ## 1. Purpose
 

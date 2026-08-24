@@ -1,4 +1,4 @@
-# Week 4 Activity 1: Happiness Dashboard
+# Week 4 Activity 1.1: Happiness Dashboard
 
 This project analyses a cleaned 20-country Happiness dataset using Pandas,
 SQLite, Matplotlib, and Plotly. It identifies the three happiest countries,
@@ -28,7 +28,7 @@ python -m pip install -r requirements.txt
 From the repository root:
 
 ```powershell
-python .\week4\activity\activity1\happiness_dashboard.py
+python .\week4\activity\activity1.1\happiness_dashboard.py
 ```
 
 Or from this activity folder:
