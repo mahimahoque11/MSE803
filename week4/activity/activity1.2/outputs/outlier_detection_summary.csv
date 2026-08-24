@@ -1,0 +1,8 @@
+Feature,Q1,Q3,IQR,Lower_Bound,Upper_Bound,IQR_Outlier_Count,Z_Score_Outlier_Count,Largest_Absolute_Z_Score,Most_Extreme_Country
+Happiness_Score,4.238,6.26,2.022,1.204,9.294,0,0,1.779,Canada
+GDP_per_Capita,0.908,1.395,0.488,0.176,2.126,0,0,1.848,Canada
+Social_Support,0.522,0.772,0.25,0.147,1.148,0,0,2.292,France
+Healthy_Life_Expectancy,51.175,73.3,22.125,17.988,106.487,0,0,1.746,New Zealand
+Freedom_to_Make_Choices,0.472,0.862,0.39,-0.113,1.448,0,0,1.528,Canada
+Generosity,0.16,0.415,0.255,-0.222,0.798,0,0,1.759,Norway
+Perceptions_of_Corruption,0.192,0.732,0.54,-0.617,1.542,0,0,1.492,Finland
